@@ -11,7 +11,7 @@
 
 int _printf(const char *format, ...)
 {
-	int i = 0, flag = 0;
+	int i = 0, length = 0;
 	va_list arg;
 	int (*f)(va_list);
 
@@ -22,20 +22,14 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			if (format[i + 2] == '%')
+			if (format[i + 1] == '%' && format[i + 2] == '%')
 				return (-1);
-			if (format[i + 1] == '%')
-			{
-				_putchar('%');
-				flag++;
-				i++;
-			}
 			else
 			{
 				f = get_format(&format[i]);
 				if (f != NULL)
 				{
-					f(arg);
+					length += f(arg);
 					i += 2;
 					continue;
 				}
@@ -44,11 +38,9 @@ int _printf(const char *format, ...)
 			}
 		}
 		else
-			_putchar(format[i]);
+			length += _putchar(format[i]);
 		i++;
 	}
 	va_end(arg);
-	if (flag == 1)
-		return (i - 1);
-	return (i);
+	return (length);
 }
