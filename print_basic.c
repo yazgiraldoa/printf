@@ -20,10 +20,9 @@ int print_i(va_list i)
 	n = va_arg(i, int);
 	count = 0;
 
-	if (n == NULL)
+	/* if (n == NULL)
 		return (-1);
-
-	/*
+	
     *if (n < MIN_LEN && n > MAX_LEN)
      *   return (-1);
     */
