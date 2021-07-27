@@ -38,7 +38,7 @@ int print_i(va_list i)
 			count++;
 		}
 	}
-	return (0);
+	return (count);
 }
 
 /**
@@ -49,19 +49,16 @@ int print_i(va_list i)
 
 int print_s(va_list s)
 {
-	int count = 0;
+	int count;
 	char *str = va_arg(s, char *);
 
 	if (str == NULL)
-	{
-		return (-1);
-	}
-	while (str[count])
+		str = "(null)";
+	for (count = 0; str[count]; count++)
 	{
 		_putchar(str[count]);
-		count++;
 	}
-	return (0);
+	return (count);
 }
 
 /**
@@ -74,10 +71,6 @@ int print_c(va_list c)
 {
 	char ch = (char)va_arg(c, int);
 
-	if (ch == '\0')
-	{
-		return (-1);
-	}
 	_putchar(ch);
-	return (0);
+	return (1);
 }
