@@ -11,21 +11,23 @@
 
 int _printf(const char *format, ...)
 {
-	int i = 0, length = 0;
+	int i = 0, length = 0, special;
 	va_list arg;
 	int (*f)(va_list);
 
-	if (format == NULL)
-		return (-1);
 	va_start(arg, format);
+	special = special_cases(format, arg);
 	while (format[i])
 	{
 		if (format[i] == '%')
 		{
-			if (format[i + 1] == '%' && format[i + 2] == '%')
+			if (special == 1)
 			{
-				return (-1);
+				i += 3;
+				length += 2;
 			}
+			else if (special == (-1))
+				return (-1);
 			else
 			{
 				f = get_format(&format[i]);
@@ -35,8 +37,6 @@ int _printf(const char *format, ...)
 					i += 2;
 					continue;
 				}
-				else
-					return (-1);
 			}
 		}
 		else
