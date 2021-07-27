@@ -1,11 +1,15 @@
 #include "holberton.h"
 #include <stdio.h>
 #include <stdarg.h>
+/*
+*#define MAX_LEN 2147483647
+*#define MIN_LEN -2147483647
+*/
 
 /**
  * print_i - function that prints an integer
  * @i: integer to print
- * Return: success is 0
+ * Return: length, or -1 if error
  */
 
 int print_i(va_list i)
@@ -15,6 +19,15 @@ int print_i(va_list i)
 
 	n = va_arg(i, int);
 	count = 0;
+
+	if (n == NULL)
+		return (-1);
+
+	/*
+    *if (n < MIN_LEN && n > MAX_LEN)
+     *   return (-1);
+    */
+
 	m = 1000000000;
 	a[0] = n / m;
 	for (j = 1; j < 10; j++)
@@ -25,7 +38,6 @@ int print_i(va_list i)
 	if (n < 0)
 	{
 		_putchar('-');
-		count++;
 		for (j = 0; j < 10; j++)
 			a[j] *= -1;
 	}
@@ -44,27 +56,31 @@ int print_i(va_list i)
 /**
  * print_s - function that prints a string
  * @s: string to print
- * Return: success is 0, error is -1
+ * Return: length, or -1 if error
  */
 
 int print_s(va_list s)
 {
-	int count;
+	int count = 0;
 	char *str = va_arg(s, char *);
 
 	if (str == NULL)
-		str = "(null)";
-	for (count = 0; str[count]; count++)
+	{
+		return (-1);
+	}
+	while (str[count])
 	{
 		_putchar(str[count]);
+		count++;
 	}
+	count--;
 	return (count);
 }
 
 /**
  * print_c - function that prints a single character
  * @c: character to print
- * Return: success is 0, error is -1
+ * Return: length
  */
 
 int print_c(va_list c)
@@ -72,5 +88,18 @@ int print_c(va_list c)
 	char ch = (char)va_arg(c, int);
 
 	_putchar(ch);
+	return (1);
+}
+
+/**
+ * print_mod - function that prints a single %
+ * @mod: character to print
+ * Return: length
+ */
+
+int print_mod(va_list mod)
+{
+	(void)mod;
+	_putchar('%');
 	return (1);
 }
