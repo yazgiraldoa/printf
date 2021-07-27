@@ -13,11 +13,11 @@ int (*get_format(const char *format))(va_list arg)
 	unsigned int j, i = 0;
 
 	format_t list[] = {
-	    {"d", print_i},
-	    {"i", print_i},
-	    {"s", print_s},
-	    {"c", print_c},
-	    {NULL, NULL}};
+		{"d", print_i},
+		{"i", print_i},
+		{"s", print_s},
+		{"c", print_c},
+		{NULL, NULL}};
 
 	j = 0;
 
