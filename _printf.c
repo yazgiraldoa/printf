@@ -23,7 +23,9 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			if (format[i + 1] == '%' && format[i + 2] == '%')
+			{
 				return (-1);
+			}
 			else
 			{
 				f = get_format(&format[i]);

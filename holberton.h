@@ -8,9 +8,7 @@
 #define MIN_LEN -2147483648
 
 /**
- * @brief 
- * 
- *
+ * struct all_formats - struct all_formats
  * @type: format
  * @f: function associated to format
  */
