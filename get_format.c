@@ -17,6 +17,7 @@ int (*get_format(const char *format))(va_list arg)
 		{"i", print_i},
 		{"s", print_s},
 		{"c", print_c},
+		{"%", print_mod},
 		{NULL, NULL}};
 
 	j = 0;
