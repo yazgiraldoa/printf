@@ -76,9 +76,6 @@ int print_c(va_list c)
 {
 	char ch = (char)va_arg(c, int);
 
-	if (ch == '\0')
-		return (-1);
-
 	_putchar(ch);
 	return (1);
 }
