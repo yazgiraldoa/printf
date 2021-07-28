@@ -20,6 +20,7 @@ int (*get_format(const char *format))(va_list arg)
 		{"x", print_x},
 		{"X", print_X},
 		{"u", print_u},
+		{"r", print_rev},
 		{"R", print_root},
 		{"%", print_mod},
 		{NULL, NULL}};

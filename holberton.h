@@ -22,6 +22,7 @@ int print_c(va_list arg);
 int print_x(va_list arg);
 int print_X(va_list arg);
 int print_u(va_list arg);
+int print_rev(va_list r);
 int print_mod(va_list arg);
 int print_root(va_list arg);
 int (*get_format(const char *format))(va_list arg);

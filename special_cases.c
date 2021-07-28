@@ -25,7 +25,7 @@ int special_cases(const char *format, va_list arg)
 				if (format[i + 3] == 'c' || format[i + 3] == 's' ||
 					format[i + 3] == 'd' || format[i + 3] == 'i' ||
 					format[i + 3] == 'u' || format[i + 3] == 'x' ||
-					format[i + 3] == 'X' || format[i + 3] == 'R')
+					format[i + 3] == 'X' || format[i + 3] == 'R' || format[i + 3] == 'r')
 					continue;
 				return (-1);
 			}
@@ -40,7 +40,7 @@ int special_cases(const char *format, va_list arg)
 			else if (format[i + 1] != 'c' && format[i + 1] != 's' &&
 					 format[i + 1] != 'd' && format[i + 1] != 'i' &&
 					 format[i + 1] != 'u' && format[i + 1] != 'x' &&
-					 format[i + 1] != 'X' && format[i + 1] != 'R')
+					 format[i + 1] != 'X' && format[i + 1] != 'R' && format[i + 1] != 'r')
 				return (-1);
 		}
 	}
