@@ -24,20 +24,12 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			if (special == 1)
+			f = get_format(&format[i]);
+			if (f != NULL)
 			{
-				i += 3;
-				length += 2;
-			}
-			else
-			{
-				f = get_format(&format[i]);
-				if (f != NULL)
-				{
-					length += f(arg);
-					i += 2;
-					continue;
-				}
+				length += f(arg);
+				i += 2;
+				continue;
 			}
 		}
 		else

@@ -11,7 +11,7 @@
 
 int special_cases(const char *format, va_list arg)
 {
-	int i, flag = 0;
+	int i;
 	(void)arg;
 
 	if (format == NULL)
@@ -25,24 +25,17 @@ int special_cases(const char *format, va_list arg)
 				if (format[i + 3] == 'c' || format[i + 3] == 's' ||
 					format[i + 3] == 'd' || format[i + 3] == 'i' ||
 					format[i + 3] == 'u' || format[i + 3] == 'x' ||
-					format[i + 3] == 'X' || format[i + 3] == 'R' || format[i + 3] == 'r')
+					format[i + 3] == 'X' || format[i + 3] == 'R' ||
+					format[i + 3] == 'r' || format[i + 3] == 'o')
 					continue;
 				return (-1);
 			}
 			else if (format[i + 1] == '%' && format[i + 2] == '%' &&
 					 format[i + 3] == '%')
 			{
-				_putchar('%');
-				_putchar('%');
 				i += 4;
-				flag = 1;
 			}
-			else if (format[i + 1] != 'c' && format[i + 1] != 's' &&
-					 format[i + 1] != 'd' && format[i + 1] != 'i' &&
-					 format[i + 1] != 'u' && format[i + 1] != 'x' &&
-					 format[i + 1] != 'X' && format[i + 1] != 'R' && format[i + 1] != 'r')
-				return (-1);
 		}
 	}
-	return (flag);
+	return (0);
 }
