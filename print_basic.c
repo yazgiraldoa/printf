@@ -55,7 +55,7 @@ int print_s(va_list s)
 
 	if (str == NULL)
 	{
-		return (-1);
+		str = "(null)";
 	}
 	while (str[count])
 	{
