@@ -17,6 +17,9 @@ int _printf(const char *format, ...)
 
 	va_start(arg, format);
 	special = special_cases(format, arg);
+	if (special == (-1))
+		return (-1);
+
 	while (format[i])
 	{
 		if (format[i] == '%')
@@ -26,8 +29,6 @@ int _printf(const char *format, ...)
 				i += 3;
 				length += 2;
 			}
-			else if (special == (-1))
-				return (-1);
 			else
 			{
 				f = get_format(&format[i]);
