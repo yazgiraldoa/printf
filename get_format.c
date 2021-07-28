@@ -20,6 +20,7 @@ int (*get_format(const char *format))(va_list arg)
 		{"x", print_x},
 		{"X", print_X},
 		{"u", print_u},
+		{"o", print_octal},
 		{"r", print_rev},
 		{"R", print_root},
 		{"%", print_mod},
@@ -34,6 +35,6 @@ int (*get_format(const char *format))(va_list arg)
 
 		j++;
 	}
-
+	_putchar(format[i]);
 	return (list[j].f);
 }
