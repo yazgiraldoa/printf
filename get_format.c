@@ -35,6 +35,5 @@ int (*get_format(const char *format))(va_list arg)
 
 		j++;
 	}
-	_putchar(format[i]);
 	return (list[j].f);
 }
