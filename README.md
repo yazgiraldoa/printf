@@ -1,6 +1,6 @@
-## _printf :page_facing_up: -- Proyect Holberton 
+## _printf :page_facing_up: --> Holberton  Project
 
-This project is for replicate the C standard library printf() function
+This project replicates the C standard library printf() function
 
 ## Dependencies :couple:
 
