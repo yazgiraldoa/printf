@@ -152,7 +152,8 @@ Output:
 Upon successful return, _printf returns the number of characters printed (excluding the terminating null byte used to end output to strings). If an output error is encountered, the function returns -1.
 
 
-<h2>Repositorio</h2>
+## Repositorio
+
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=yazgiraldoa&repo=printf)](https://github.com/yazgiraldoa/printf)
 
  <h2 align = 'center'>Authors</h2>
