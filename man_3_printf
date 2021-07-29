@@ -16,8 +16,7 @@ Print to standard output under the control of a preformatted data according to t
 .I Format
 
 A string that specifies how subsequent arguments are converted for the output which can be specified with the "%" operator.
-.SH Return value
-On a successful return, these functions return the number of inputs printed, excluding the null byte used to finalize the output to strings.
+
 .SH String format
 .TP
 .BR %c
@@ -55,7 +54,47 @@ single percent input (%). A single '%' is written, but no arguments are converte
 .TP
 .B \en
 new line
+.SH RETURN VALUE
+Upon successful return, _printf returns the number of characters printed (excluding the terminating null byte used to end output to strings).
+If an output error is encountered, the function returns -1.
 .SH ERRORS
 No known bugs.
-.SH AUTHOR
-Yazmin Giraldo, Juan Duque
+.SH EXAMPLES
+.TP
+.B d, i
+The int argument is converted to signed decimal notation:
+
+    _printf("%d\en", 7);
+
+The output would be 7.
+.TP
+.B o
+The unsigned int argument is converted to unsigned octal (o):
+
+    _printf("%o\en", 77);
+
+The output would be 115.
+.TP
+.B c
+The int argument is converted to an unsigned char:
+
+    _printf("%c\en", 48);
+
+The output would be 0.
+.TP
+.B s
+The const char * argument is expected to be a pointer to a character array. Characters from the array are written starting from the first element to the end:
+
+    _printf("%s\en", Hello, World!);
+
+The output would be "Hello, World!".
+.TP
+.B R
+Identical to the s conversion specifier, except each character of the array is converted to its corresponding character in ROT13 before being written:
+
+    _printf("%R\en", Hello, World);
+
+The output would be "Uryyb, Jbeyq".
+
+.SH AUTHORS
+Made by Yazmin Giraldo and Juan Duque.
