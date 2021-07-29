@@ -147,7 +147,7 @@ Output:
 ```
 %
 ```
-### Flowchar
+### Flowchart
 ![](https://github.com/yazgiraldoa/printf/blob/master/Flowchart.png)
 
 
