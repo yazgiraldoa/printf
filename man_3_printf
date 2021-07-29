@@ -16,6 +16,13 @@ Print to standard output under the control of a preformatted data according to t
 .I Format
 
 A string that specifies how subsequent arguments are converted for the output which can be specified with the "%" operator.
+The overall syntax of a conversion specification is:
+
+           %[$][flags][width][.precision][length modifier]conversion
+
+.I Prototype
+
+int _printf(const char *format, ...);
 
 .SH String format
 .TP
