@@ -10,6 +10,18 @@ This project replicates the C standard library printf() function
 
 * The prototypes of all your functions should be included in your header file called "holberton.h"
 
+## Instructions to use it
+
+* To use _printf in your computer, you should have Git and the `gcc` compiler (you can install it typing `sudo apt-get install gcc` in your terminal).
+
+* Then, you can clone the repository with: `git clone https://github.com/yazgiraldoa/printf.git` 
+
+* After cloning the repository, you can include holberton.h in your main file and call _printf function. 
+
+* Compile all .c files with: `gcc -Wall -Wextra -Werror -pedantic -std=gnu89 -Wno-format *.c`
+
+* Also, there's a manual in the repository, so you can access to it by typing `man ./man_3_printf` in your terminal.
+
 
 ## File
 file            |   Description
