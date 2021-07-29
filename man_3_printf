@@ -1,82 +1,61 @@
-TH man 2 "July 21, 2021" "_printf man page"
-
-
+.TH man 2 "July 21, 2021" "_printf man page"
 .SH NAME
-
-    _PRINTF.
-    
-
+    _PRINTF
 .SH SYNOPSIS
-
-    _printf ("string and preformatted value", variable to convert to format)
-
-
-.B _printf
-
-- Formatted output conversion.
-
-
+.B _printf \fI("string and preformatted value", variable to convert to format)
+.br
+.B _printf 
+\fI\, FORMAT \/\fR[\fI\,ARGUMENT\/\fR]...
+.br
+.B _printf 
+\fI\,OPTION\/\fR
 .SH DESCRIPTION
-
-
-.nh .B _printf ()
-
+.B _printf ()
 Print to standard output under the control of a preformatted data according to the specifying option.
 
-
-.I format
+.I Format
 
 A string that specifies how subsequent arguments are converted for the output which can be specified with the "%" operator.
-
-
 .SH Return value
-
-On a successful return, these functions return the number of characters printed, excluding the null byte used to finalize the output to strings.
-
-
+On a successful return, these functions return the number of inputs printed, excluding the null byte used to finalize the output to strings.
 .SH String format
-
-
 .TP
-
-.BR% c
-
-    .nh conversion character for single character (char).
-
-
+.BR %c
+conversion input for single character (char).
 .TP
-
-.B% s
-
-    .nh conversion character for string (char *).
-
-
+.B %s
+conversion input for string (char *).
 .TP
-
-.B% i,% d
-
-    .nh conversion character for integer (int, long int).
-
-
+.B %i
+conversion input for integer (int).
 .TP
-
+.B %d
+conversion input in to integer in (long int)
+.TP
+.B %x
+conversion input in are used for hexadecimal conversions but the lowercase ("abcdef")
+.TP
+.B %X
+conversion input in are used for hexadecimal conversions but the uppercase ("ABCDEF")
+.TP
+.B %u
+Unsigned decimal conversion of an integer
+.TP
+.B %r
+conversion input in reverse
+.TP
+.B %o
+conversion input in octal unsigned conversion of an integer
+.TP
+.B %R
+Encrypts or Decrypts an input character string in ROT13.
+.TP
 .B %%
-
-    .nh single percent character (%). A single '%' is written, but no arguments are converted.
-
-
+single percent input (%). A single '%' is written, but no arguments are converted.
 .TP
-
-.B \ n
-
-    .nh new line.
-
-
+.B \en
+new line
 .SH ERRORS
-
 No known bugs.
-
-
 .SH AUTHOR
-
 Yazmin Giraldo, Juan Duque
