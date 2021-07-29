@@ -147,6 +147,9 @@ Output:
 ```
 %
 ```
+### Flowchar
+![](https://github.com/yazgiraldo/printf/blob/main/img/Flowchart.png)
+
 
 ## Return Value
 Upon successful return, _printf returns the number of characters printed (excluding the terminating null byte used to end output to strings). If an output error is encountered, the function returns -1.
