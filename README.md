@@ -153,7 +153,7 @@ Upon successful return, _printf returns the number of characters printed (exclud
 
 
 <h2>Repositorio</h2>
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=yazgiraldoa&repo=/printf)](https://github.com/yazgiraldoa/printf)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=yazgiraldoa&repo=printf)](https://github.com/yazgiraldoa/printf)
 
  <h2 align = 'center'>Authors</h2>
 <h2 align = 'center' ><img src='https://raw.githubusercontent.com/ShahriarShafin/ShahriarShafin/main/Assets/handshake.gif' width="300px"> 
