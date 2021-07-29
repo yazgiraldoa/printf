@@ -148,7 +148,7 @@ Output:
 %
 ```
 ### Flowchar
-![](https://github.com/yazgiraldo/printf/blob/main/img/Flowchart.png)
+![](https://github.com/yazgiraldoa/printf/blob/master/Flowchart.png)
 
 
 ## Return Value
