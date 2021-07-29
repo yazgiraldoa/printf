@@ -16,6 +16,7 @@ int print_octal(va_list o)
 
 	n = va_arg(o, unsigned int);
 	m = 1073741824;
+	a[0] = n / m;
 	for (i = 1; i < 11; i++)
 	{
 		m /= 8;
@@ -33,3 +34,6 @@ int print_octal(va_list o)
 
 	return (count);
 }
+
+
+
